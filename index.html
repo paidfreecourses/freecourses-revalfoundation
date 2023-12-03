@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>MUFT - My University of Free Taleem ┃ by Azad Chaiwala</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.fancybox").fancybox({
+                'hideOnContentClick': true
+            });
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKYZDCZLS4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HKYZDCZLS4');
+    </script>
+
+    <!-- Include jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body class="">
+    <header class="bg-light fixed-top ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand " href="/">
+				<img src="New logo for reval foundation beta.png" alt="muft-logo" width="auto" class="img-fluid">
+			</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+                <div class="collapse navbar-collapse justify-content-end flex-wrap-reverse" id="navbarSupportedContent">
+                    <form class="navbar-form w-50" role="search">
+                        <div class="input-group search-container">
+                            <input type="text" class="form-control search-bar rounded" id="search-input" autocomplete="off" placeholder="Search Courses">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <div id="search-results"></div>
+                    </form>
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sellcourse">Sell Course</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $(document).ready(function() {
+            $(".search-bar").click(function() {
+                $("#search-results").fadeIn();
+            });
+
+            // Hide search results when clicking outside
+            $(document).click(function(e) {
+                if (!$(e.target).closest(".search-container").length) {
+                    $("#search-results").fadeOut();
+                }
+            });
+
+            // Prevent search results from closing when clicking inside
+            $(".search-results").click(function(e) {
+                e.stopPropagation();
+            });
+        })
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        let delayTimer;
+
+        searchInput.addEventListener('input', function() {
+            clearTimeout(delayTimer);
+            const query = searchInput.value.trim();
+
+            if (query === '') {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            delayTimer = setTimeout(() => {
+                performSearch(query);
+            }, 300);
+        });
+
+        function performSearch(query) {
+            // Perform AJAX request to your Symfony route
+            const url = '/search?query=' + encodeURIComponent(query);
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    searchResults.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching search results:', error);
+                });
+        }
+    </script>
+
+
+    <main class="mt-5 pt-0 flex-shrink-0" style="margin-bottom: 30px !important;">
+        <div class="container-fluid mb-3" id="containerFluid">
+            <div class="container d-flex align-items-center justify-content-between carousel-container " style="height: 100%;">
+                <div class="carousel-inner-container">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="azad-va  d-flex align-items-center">
+                                    <div class="azad-text">
+                                        <h1 class="text-white font-weight-bold ">Asli Taleem<br> Seekho, Wo bhi <br>Bilkul <span class="font-weight-bold shadow-text ">MUFT</span></h1>
+                                        <img class="my-3" src="/images/site-images/sig.png" alt="muft-logo" width="200">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="azad-list">
+                                    <ul>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> We’re not Free, we’re MUFT.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> No Shakespeare & No Mr. Chips.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> ASLI/NASLI Taleem & Open 24/7.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> Pakistan's 2nd Best University.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> Full Courses, upto 51 hours long.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> Available in every home of Pakistan.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> Real-World Assessment Instead of Exams.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> 20+ IT Based Subjects (Updated Regularly).</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> No minimum age, just a pc/laptop is required.</h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="mb-0"><i class="fa fa-check-square-o"></i> Accredited by the only accreditation that <br> matters, the workplace.</h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="azad-img" style="width: 40%">
+                    <!-- <img class="" src="/images/site-images/azadbhai-image-shadow.png" alt="azadbhai" width="100%"> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container marketing my-5">
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+                <p class="mb-0">Explore from <b>28+ Courses</b></p>
+
+                <div class="d-flex flex-wrap">
+                    <a href="/" class="badge active-link rounded-pill nav-link mx-1 font-bold">Recommended</a> |
+                    <a href="/?sort_by=popular" class="fw-bold nav-link  mx-1">Popular</a> |
+                    <a href="/?sort_by=recently-added" class="fw-bold nav-link mx-1">Recently Added</a>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4 d-flex align-items-stretch">
+                    <div class="card d-flex flex-column justify-content-between" style="background: #F4F9FF;">
+                        <a href="https://mega.nz/folder/kmdllKAb#WMTw7ktb3FTo833xZSp1qw" style="text-decoration: none; color: black; display: block">
+						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCa_nam7NEq_2glEYCIK8brD0FXAUipzRyDw&usqp=CAU" alt=" python-thumbnail-64f855552e24a812882309.jpg ">
+						<div class="card-body d-flex flex-column">
+							<h2 class="card-title">Andrew tate Real world Course</h2>
+							<p class="card-text course-summary" id="textContainer">This is andrew tate real world course in this you learn andrew tate paid premiume courses in free Just thanks to Reval Foundation</p>
+						</div>
+						<div class="card-footer text-muted py-2 d-flex flex-column border-top-0" style="background: #F4F9FF;">
+							<div class="text-muted mb-2 d-flex justify-content-between">
+								<h6><i class="fa fa-youtube-play"></i> 15 lessons</h6>
+								<h6><i class="fa fa-clock-o"></i> 9.2 hrs</h6>
+								<h6><i class="fa fa-eye"></i> 2534 views</h6>
+							</div>
+								<a class="watch-now-btn text-center mb-2 w-100 rounded" href="https://mega.nz/folder/kmdllKAb#WMTw7ktb3FTo833xZSp1qw">Start Learning <i class="fa fa-angle-double-right"></i> </a>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- <div class="col-lg-4 mb-4 d-flex align-items-stretch">
+                <div class="card d-flex flex-column justify-content-between" style="background: #F4F9FF;">
+                    <a href="/course/python-programming-full-course-for-beginners-by-azadchaiwala" style="text-decoration: none; color: black; display: block">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgc4tnVOP_YPRt4XNZuzCpru3Px9UMtc2OdTI18Hw4IjwB7MaweorwdU0LEH-DX6GrHrU&usqp=CAU" alt=" python-thumbnail-64f855552e24a812882309.jpg ">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title">Andrew tate Real world Course</h2>
+                        <p class="card-text course-summary" id="textContainer">This is andrew tate real world course in this you learn andrew tate paid premiume courses in free Just thanks to Reval Foundation</p>
+                    </div>
+                    <div class="card-footer text-muted py-2 d-flex flex-column border-top-0" style="background: #F4F9FF;">
+                        <div class="text-muted mb-2 d-flex justify-content-between">
+                            <h6><i class="fa fa-youtube-play"></i> 30 lessons</h6>
+                            <h6><i class="fa fa-clock-o"></i> 9.2 hrs</h6>
+                            <h6><i class="fa fa-eye"></i> 1434 views</h6>
+                        </div>
+                            <a class="watch-now-btn text-center mb-2 w-100 rounded" href="/course/python-programming-full-course-for-beginners-by-azadchaiwala">Start Learning <i class="fa fa-angle-double-right"></i> </a>
+                </div>
+                </a>
+            </div>
+        </div>
+ -->
+
+
+
+
+
+
+
+
+
+            
+
+
+
+            <!-- this is row div ends here !! -->
+        </div>
+
+
+
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                <li class="page-item"><a class="page-link" href="/2
+">2</a></li>
+            </ul>
+        </nav>
+    </main>
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+            <div class="d-none d-sm-block">
+                <div class="d-flex justify-content-between">
+                    <a class="navbar-brand" href="/">
+                            <img src="New logo for reval foundation beta.png" alt="muft-logo" width="auto" class="img-fluid">
+                        </a>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="/" class="nav-link link-secondary text-white">Home</a></li>
+                        <li class="nav-item"><a href="/contact" class="nav-link link-secondary text-white">Contact us</a></li>
+                        <!-- <li class="nav-item"><a href="https://www.azadchaiwala.com/" target="_blank" class="nav-link link-secondary text-white">Our Institute</a></li> -->
+                    </ul>
+                </div>
+                <hr class="hr text-muted">
+            </div>
+            <div class="d-flex justify">
+                <span class="text-muted ">
+                        <b>NOTE:</b> I hope my <a href="/"> Reval Foundation</a> project has been beneficial to you in some way, and I am grateful for your support. If you wish to express your gratitude, a simple gesture would mean a lot:
+                        raise your hands wherever you are and make a heartfelt dua (prayer) for my team and me. May Allah guide us, forgive us, and grant us a place in His Jannah (paradise).
+                        Also, pray that He keeps us steadfast in our mission to educate and empower our ummah (community).
+                    </span>
+            </div>
+            <hr class="hr text-muted mt-3">
+            <div class="text-muted my-1 mt-3 d-flex justify-content-between">
+                <p class="m-0"> &copy; Copyright <a href="https://www.azadchaiwala.com/" target="_blank" class="text-muted text-decoration-none"><b>Reval Foundation</b></a>. All Rights Reserved.</p>
+                <!-- <div class="social-icons">
+                    <a href="https://www.facebook.com/AzadChaiwala/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@AzadChaiwala" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/azadchaiwala/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/AzadChaiwala" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@azadchaiwalaofficial" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.snapchat.com/add/azadchaiwala" target="_blank"><i class="fab fa-snapchat"></i></a>
+                    <a href="https://www.whatsapp.com/channel/0029VaCcFMaDeON7vvhNSo2L" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://linkedin.com/in/azad-chaiwala" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

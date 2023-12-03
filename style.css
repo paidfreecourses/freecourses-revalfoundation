@@ -1,0 +1,256 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.social-icons a {
+    font-size: 18px !important;
+    padding-left: 4px;
+    color: grey;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.course-summary {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.header-gradient {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    background: rgb(24, 28, 53);
+    background: linear-gradient(90deg, rgba(24, 28, 53, 1) 0%, rgba(88, 46, 68, 1) 50%, rgba(141, 60, 79, 1) 100%);
+}
+
+.sell-column-left,
+.sell-column-middle,
+.sell-column-right {
+    background: #c1c1c2;
+    color: white;
+    padding: 1rem;
+}
+
+.sell-column-middle {
+    background: #c7c7c7;
+}
+
+.sell-column-right {
+    background: #b1b1b1;
+}
+
+#containerFluid {
+    /*width: 1440px;*/
+    /*height: 628px;*/
+    padding-top: 35px;
+    flex-shrink: 0;
+    background: linear-gradient(102deg, #001632 0%, #c24a5a 100%);
+    padding-right: 0;
+}
+
+.shadow-text {
+    font-weight: bold;
+    color: #ffee00;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
+    /*background-image: linear-gradient(123deg, #F00 0%, #FF7A00 100%);*/
+    /*-webkit-background-clip: text; !* For Safari *!*/
+    /*background-clip: text;*/
+    /*color: transparent;*/
+}
+
+.azad-text>h1 {
+    font-size: 80px !important
+}
+
+.azad-list {
+    padding-top: 30px;
+}
+
+.azad-list>ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.azad-list>ul>li {
+    color: white
+}
+
+.azad-list>ul>li>h4 {
+    font-size: 26px !important
+}
+
+.azad-list>ul>li>h4>i {
+    color: #ffee00;
+}
+
+.watch-now-btn {
+    padding: 12px;
+    background: #FF5469;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.active-link {
+    background: #FF5469;
+    color: #fff !important;
+}
+
+.carousel-inner-container {
+    width: 50%;
+}
+
+.carousel-item {
+    height: 450px !important;
+}
+
+.comment-picture {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.comment-color {
+    background-color: #F2F2F2;
+    padding: 5px;
+}
+
+.comment-color2 {
+    background-color: #dfdede;
+    padding: 5px;
+}
+
+.input-group .input-group-text {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    Z-index: 100
+}
+
+.search-bar {
+    /*padding-left: 30px !important;*/
+}
+
+/* Style the search results container */
+
+#search-results {
+    position: absolute;
+    /*top: 100%; !* Position below the search bar *!*/
+    /*left: 0;*/
+    width: 32%;
+    /*background-color: white; !* Set a background color for the results *!*/
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    /* Ensure results are above other content */
+}
+
+@media (max-width: 992px) {
+    #search-results {
+        width: 70% !important;
+    }
+    .azad-img {
+        display: none;
+        /* Remove the spacing on smaller screens */
+    }
+    .azad-text {
+        margin-bottom: 20px;
+        text-align: left;
+        display: block;
+        justify-content: center;
+        align-content: center;
+    }
+    .carousel-container {
+        display: block !important;
+        justify-content: center;
+        padding-right: 0;
+    }
+    .azad-text>h1 {
+        font-size: 4vw !important;
+        /*text-align: center;*/
+    }
+    .carousel-inner-container {
+        width: 100%;
+    }
+    .azad-list {
+        padding-top: 10px;
+    }
+    .azad-list>ul>li>h4 {
+        font-size: 18px !important
+    }
+    .carousel-item {
+        height: 270px !important;
+    }
+    .azad-list>ul {
+        column-count: 2;
+    }
+    .carousel-item {
+        background-image: url('/images/site-images/azadbhai-image-shadow-50.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+    /* Add any additional responsive styles for smaller screens here */
+}
+
+@media (max-width: 500px) {
+    #search-results {
+        width: 90% !important;
+    }
+    .azad-list>ul {
+        column-count: 1;
+    }
+    .azad-list>ul>li {
+        background: rgba(0, 0, 0, 0.35);
+        color: white;
+        width: max-content;
+        padding: 4px;
+        margin-bottom: 2px;
+    }
+    .azad-list>ul>li>h4 {
+        font-size: 14px !important
+    }
+    .carousel-item {
+        height: 320px !important;
+    }
+    .azad-text>h1 {
+        font-size: 8vw !important
+    }
+    .carousel-container {
+        padding-top: 15px;
+        padding-right: 0;
+    }
+    .azad-va {
+        height: 100%;
+    }
+    .carousel-item {
+        background-image: url('/images/site-images/azadbhai-image-shadow-50.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+}
